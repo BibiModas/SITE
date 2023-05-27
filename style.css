@@ -1,46 +1,145 @@
-*{ 
-    margin: 0; 
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.cabecalho {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    padding: 15px 0;
-    border: 5px solid;
+:root {
+  --cor-text-primaria: #ffffff;
+  --cor-text-secundaria: #ffbf00;
+
+  --bg-primaria: #1d1d1d;
+  --bg-secundaria: #000000;
+
+  --container: 1200px;
 }
 
-.barras{
-    width: 2%;
+img {
+  display: block;
+  width: 100%;
 }
 
-.logo{
-    width: 10%;
-
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-primaria);
+  color: var(--cor-text-primaria);
+  gap: 10px;
 }
 
-.cabecalho-lista-item1{
-    text-shadow: 3px 3px 7px black;
-    display: inline-block;
-    margin: 0 12px;
-    font-size: 35px;
-    position: absolute;
-    top: 50px;
-    left: 100px;
-    font-style:italic ;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--container);
+  padding: 5px 10px;
 }
 
-.cabecalho-lista-item2{
-    text-shadow: 3px 3px 7px black;
-    display: inline-block;
-    margin: 0 12px;
-    font-size: 35px;
-    position: absolute;
-    top: 50px;
-    left: 240px;
-    font-style:italic ;
+.cabeçalho {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.logo {
+  font-family: 'Italiana', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
 
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-family: 'Italianno', cursive;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: var(--cor-text-secundaria);
+  font-size: 30px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil i {
+  font-size: 20px;
+}
+
+.container_conteúdo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container_conteúdo__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_conteúdo__logo {
+  width: 300px;
+}
+
+.container_conteúdo__descrição {
+  font-family: 'Italiana', serif;
+  width: 500px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.container_conteúdo__moda {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.conteúdo__moda {
+  width: 250px;
+}
+
+.rodapé {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.rodapé__logo {
+  width: 100px;
+}
+
+.rodapé__info {
+  font-style: italic;
+}
+
+.autores {
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  font-family: 'Italiana', serif;
+  font-size: 20px;
+}
